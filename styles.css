@@ -1,3 +1,12 @@
+/* Basic Reset and Root Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --border-color: #bdc3c7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,19 +14,22 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-header {
-    background-color: #333;
+header, footer {
+    background-color: var(--primary-color);
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 20px;
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 main {
@@ -31,26 +43,25 @@ main {
 
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, 300px); /* 2 rows of 300px height */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
     gap: 20px;
 }
 
-/* Each grid item is now a link (button) */
 .grid-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    text-decoration: none; /* Remove underline */
-    color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
 .grid-item h2 {
@@ -62,62 +73,48 @@ main {
     color: #666;
 }
 
-/* Hover effect */
 .grid-item:hover {
-    transform: translateY(-10px); /* Moves up */
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Smooth shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Change text color on hover */
 .grid-item:hover h2, .grid-item:hover p {
-    color: #000;
+    color: var(--text-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .grid-layout {
-        grid-template-columns: 1fr; /* 1 column on smaller screens */
-        grid-template-rows: auto; /* Auto height for smaller screens */
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
     padding: 20px 0;
     margin-top: 40px;
 }
 
-
-/* Basic reset for better consistency across browsers */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Container for the buttons */
 .button-container {
-    display: flex; /* Aligns buttons horizontally */
-    gap: 10px; /* Adds space between buttons */
-    padding: 10px; /* Adds space around the container */
+    display: flex;
+    gap: 10px;
+    padding: 10px;
 }
 
-/* Style for the buttons */
 .btn {
     display: inline-block;
-    padding: 10px 20px; /* Adds padding inside the button */
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    color: white;
-    background-color: #007bff; /* Button color */
+    color: #fff;
+    background: linear-gradient(45deg, var(--primary-color), darken(var(--primary-color), 10%));
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth background color transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Darker button color on hover */
+    background: linear-gradient(45deg, darken(var(--primary-color), 10%), var(--primary-color));
 }
