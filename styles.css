@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+  }
+  
+  /* Section Styling */
+  .blog-post, .research-summary, .news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .blog-post h2 a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-post h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Card Styling for Projects */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+/* Card Hover Effect */
+.card {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+
+  .blog-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .blog-card .card-title {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .blog-card .card-text {
+    color: #555;
+  }
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  
